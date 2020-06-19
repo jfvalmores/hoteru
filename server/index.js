@@ -31,7 +31,7 @@ app.use(session({
   saveUninitialized: false,
   secret: APP_SECRET,
   cookie: {
-    maxAge: APP_SESS_AGE
+    maxAge: 300000,
   }
 }));
 
@@ -45,6 +45,11 @@ database.once('error', console.error.bind(console, 'MongoDB connection failed!')
 
 app.get('/', (req, res) => {
   res.send('Hello, world!');
+});
+
+app.get('/api/test', (req, res) => {
+  const tests = require('./tests');
+  res.send(tests.run());
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
