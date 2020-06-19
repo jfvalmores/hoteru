@@ -4,10 +4,13 @@ const Schema = mongoose.Schema;
 const Users = Schema({
   username: { type: String, required: true },
   password: { type: String },
+
   first_name: { type: String },
   last_name: { type: String },
   email: { type: String, lowercase: true },
-  birthdate: { type: Date, default: Date.now }
+  birthdate: { type: Date, default: Date.now },
+
+  admin_flag: { type: Boolean, default: false }
 }, { timestamp: true });
 
 module.exports = mongoose.model('users', Users);
