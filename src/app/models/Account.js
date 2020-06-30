@@ -6,9 +6,9 @@ const Accounts = Schema({
   type: { type: String, required: true },
 
   email: { type: String, lowercase: true },
-  contact: [String],
-  address: String,
-  gender: String,
+  contact: { type: [String] },
+  address: { type: String },
+  gender: { type: String },
 
   memo: { type: String },
   card_id: { type: String },
