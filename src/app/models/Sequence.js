@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 const Schema = mongoose.Schema;
 
 const Sequences = new Schema({
@@ -6,4 +7,4 @@ const Sequences = new Schema({
   seq: { type: Number, default: 1 }
 });
 
-module.exports = mongoose.model('sequences', Sequences);
+export default mongoose.model('sequences', Sequences);

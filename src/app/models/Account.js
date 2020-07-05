@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 const Schema = mongoose.Schema;
 
 const Accounts = Schema({
@@ -15,4 +16,4 @@ const Accounts = Schema({
   card_type: { type: String }
 }, { timestamp: true });
 
-module.exports = mongoose.model('accounts', Accounts);
+export default mongoose.model('accounts', Accounts);

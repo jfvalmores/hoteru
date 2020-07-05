@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 const Schema = mongoose.Schema;
 
 const Users = Schema({
@@ -13,4 +14,4 @@ const Users = Schema({
   admin_flag: { type: Boolean, default: false }
 }, { timestamp: true });
 
-module.exports = mongoose.model('users', Users);
+export default mongoose.model('users', Users);

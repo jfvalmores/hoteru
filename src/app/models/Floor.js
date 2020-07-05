@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 const Schema = mongoose.Schema;
 
 const Floors = Schema({
@@ -7,4 +8,4 @@ const Floors = Schema({
   hotel: { type: String },
 });
 
-module.exports = mongoose.model('floors', Floors);
+export default mongoose.model('floors', Floors);

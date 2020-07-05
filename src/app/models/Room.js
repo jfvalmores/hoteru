@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 const Schema = mongoose.Schema;
 
 const Rooms = Schema({
@@ -8,4 +9,4 @@ const Rooms = Schema({
   rate: { type: Number },
 });
 
-module.exports = mongoose.model('rooms', Rooms);
+export default mongoose.model('rooms', Rooms);

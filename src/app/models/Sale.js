@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 const Schema = mongoose.Schema;
 
 const Sales = Schema({
@@ -13,4 +14,4 @@ const Sales = Schema({
   total: { type: Number },
 });
 
-module.exports = mongoose.model('sales', Sales);
+export default mongoose.model('sales', Sales);

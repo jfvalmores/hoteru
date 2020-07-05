@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 const Schema = mongoose.Schema;
 
 const Hotels = Schema({
@@ -7,4 +8,4 @@ const Hotels = Schema({
   address: { type: String },
 });
 
-module.exports = mongoose.model('hotels', Hotels);
+export default mongoose.model('hotels', Hotels);
